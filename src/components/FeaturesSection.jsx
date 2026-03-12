@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Custom SVG Icons (simple)
+// Ikon SVG sederhana (bisa diganti dengan yang lebih mirip)
 const LightningIcon = () => (
   <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
