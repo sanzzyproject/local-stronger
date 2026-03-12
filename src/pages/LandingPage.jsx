@@ -1,7 +1,7 @@
 import React from 'react';
 import LandingHero from '../components/LandingHero';
 import FeaturesSection from '../components/FeaturesSection';
-import GettingStartedSection from '../components/GettingStartedSection'; // baru
+import GettingStartedSection from '../components/GettingStartedSection';
 import StatsSection from '../components/StatsSection';
 import PerformanceSection from '../components/PerformanceSection';
 import TrustedTools from '../components/TrustedTools';
@@ -14,7 +14,7 @@ export default function LandingPage() {
     <div className="bg-white text-gray-900 overflow-x-hidden">
       <LandingHero />
       <FeaturesSection />
-      <GettingStartedSection /> {/* ditambahkan */}
+      <GettingStartedSection />
       <StatsSection />
       <PerformanceSection />
       <TrustedTools />
