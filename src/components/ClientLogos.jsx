@@ -68,7 +68,8 @@ export default function ClientLogos() {
           {logos.map((item, idx) => (
             <div 
               key={idx} 
-              className="group flex items-center space-x-3 cursor-pointer grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500 ease-out"
+              // Menghapus grayscale & opacity-50 di sini agar logo langsung berwarna cerah
+              className="group flex items-center space-x-3 cursor-pointer transition-all duration-500 ease-out"
             >
               <div className="transform group-hover:scale-110 transition-transform duration-500">
                 {item.logo}
