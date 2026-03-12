@@ -1,15 +1,14 @@
-// src/components/BottomNavbar.jsx
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { IconHome, IconPhotos, IconVideos, IconDocuments, IconApk, IconSettings } from './IconComponents';
 
 const navItems = [
-  { to: '/', label: 'Home', icon: IconHome },
-  { to: '/photos', label: 'Photos', icon: IconPhotos },
-  { to: '/videos', label: 'Videos', icon: IconVideos },
-  { to: '/documents', label: 'Docs', icon: IconDocuments },
-  { to: '/apk', label: 'APK', icon: IconApk },
-  { to: '/settings', label: 'Settings', icon: IconSettings },
+  { to: '/app', label: 'Home', icon: IconHome },
+  { to: '/app/photos', label: 'Photos', icon: IconPhotos },
+  { to: '/app/videos', label: 'Videos', icon: IconVideos },
+  { to: '/app/documents', label: 'Docs', icon: IconDocuments },
+  { to: '/app/apk', label: 'APK', icon: IconApk },
+  { to: '/app/settings', label: 'Settings', icon: IconSettings },
 ];
 
 export default function BottomNavbar() {
