@@ -1,6 +1,6 @@
-// src/App.jsx
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Photos from './pages/Photos';
@@ -13,7 +13,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        {/* Landing page at root */}
+        <Route path="/" element={<LandingPage />} />
+        
+        {/* Main app under /app */}
+        <Route path="/app" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="photos" element={<Photos />} />
           <Route path="videos" element={<Videos />} />
