@@ -9,7 +9,7 @@ export default function LandingHero() {
       {/* Navbar Atas dengan efek Blur Modern saat discroll */}
       <nav className="sticky top-0 z-50 bg-white/60 backdrop-blur-lg border-b border-gray-100 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="text-xl font-bold text-gray-900 tracking-tight">LocalStronge</span>
+          <span className="text-xl font-bold text-gray-900 tracking-tight">LocalVault</span>
           
           {/* Foto Profil tanpa background & border (1:1) */}
           <img 
@@ -65,7 +65,7 @@ export default function LandingHero() {
                  
                  {/* UPDATE: Logo diganti dengan gambar 1:1 di sini */}
                  <img 
-                   src="https://b.top4top.io/p_3723vlx940.jpg" 
+                   src="https://j.top4top.io/p_3723punib0.jpg" 
                    alt="App Visual"
                    className="w-40 h-45 object-cover rounded-3xl shadow-lg rotate-3 transform hover:rotate-0 transition-all duration-500"
                  />
