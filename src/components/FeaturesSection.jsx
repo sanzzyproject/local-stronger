@@ -1,22 +1,21 @@
 import React from 'react';
 
-// Custom SVG Icons
+// Custom SVG Icons (simple)
 const LightningIcon = () => (
-  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0b3b7a" strokeWidth="1.5">
-    <path d="M13 2L3 14h8l-2 8 10-12h-8l2-8z" strokeLinecap="round" strokeLinejoin="round"/>
+  <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
   </svg>
 );
 
 const LockIcon = () => (
-  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0b3b7a" strokeWidth="1.5">
-    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+  <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
   </svg>
 );
 
 const CodeIcon = () => (
-  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0b3b7a" strokeWidth="1.5">
-    <path d="M16 18L22 12L16 6M8 6L2 12L8 18"/>
+  <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
   </svg>
 );
 
@@ -28,8 +27,8 @@ const features = [
   },
   {
     icon: <LockIcon />,
-    title: 'Secure Local Storage',
-    description: 'Files are stored directly inside your browser and never uploaded to any external server.',
+    title: 'Authentication Required',
+    description: 'Secure your access with browser isolation. Files are stored locally and never leave your device.',
   },
   {
     icon: <CodeIcon />,
@@ -40,18 +39,12 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-24">
-      <h2 className="text-4xl font-bold text-center text-[#0f172a] mb-16">Why Choose LocalVault?</h2>
+    <section className="max-w-7xl mx-auto px-6 py-20 bg-gray-50">
       <div className="grid md:grid-cols-3 gap-8">
         {features.map((feature, idx) => (
-          <div
-            key={idx}
-            className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#0b3b7a]/20 group"
-          >
-            <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
-              {feature.icon}
-            </div>
-            <h3 className="text-2xl font-semibold text-[#0f172a] mb-3">{feature.title}</h3>
+          <div key={idx} className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow">
+            <div className="mb-4">{feature.icon}</div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">{feature.title}</h3>
             <p className="text-gray-600 leading-relaxed">{feature.description}</p>
           </div>
         ))}
