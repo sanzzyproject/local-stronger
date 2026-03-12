@@ -1,4 +1,8 @@
 /* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @keyframes blob {
   0% { transform: translate(0px, 0px) scale(1); }
   33% { transform: translate(30px, -50px) scale(1.1); }
@@ -10,6 +14,11 @@
 }
 .animation-delay-2000 {
   animation-delay: 2s;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
 }
 @keyframes marquee {
   0% { transform: translateX(0); }
