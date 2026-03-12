@@ -13,7 +13,7 @@ export default function LandingHero() {
           
           {/* Foto Profil tanpa background & border (1:1) */}
           <img 
-            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=100&h=100&fit=crop" 
+            src="https://i.top4top.io/p_3723u1lwj0.jpg" 
             alt="Profile" 
             className="w-10 h-10 object-cover rounded-full"
           />
@@ -65,7 +65,7 @@ export default function LandingHero() {
                  
                  {/* UPDATE: Logo diganti dengan gambar 1:1 di sini */}
                  <img 
-                   src="https://b.top4top.io/p_3723t4gq90.jpg" 
+                   src="https://j.top4top.io/p_37230xumt1.jpg" 
                    alt="App Visual"
                    className="w-40 h-45 object-cover rounded-3xl shadow-lg rotate-3 transform hover:rotate-0 transition-all duration-500"
                  />
