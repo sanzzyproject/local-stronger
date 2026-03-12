@@ -8,13 +8,13 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section className="bg-[#0f172a] py-20">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+    <section className="bg-blue-600 py-16">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center text-white">
           {stats.map((stat, idx) => (
-            <div key={idx} className="text-white">
+            <div key={idx}>
               <div className="text-5xl font-bold mb-2">{stat.value}</div>
-              <div className="text-lg text-gray-300">{stat.label}</div>
+              <div className="text-lg text-blue-100">{stat.label}</div>
             </div>
           ))}
         </div>
