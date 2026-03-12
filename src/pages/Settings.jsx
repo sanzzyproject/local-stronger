@@ -14,7 +14,7 @@ export default function Settings() {
 
   return (
     <div className="space-y-6">
-      <h2 className="text-xl font-semibold">⚙️ Settings & security</h2>
+      <h2 className="text-xl font-semibold">Settings & security</h2>
 
       <StorageInfo />
 
