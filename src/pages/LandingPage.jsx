@@ -1,25 +1,17 @@
 import React from 'react';
 import LandingHero from '../components/LandingHero';
+import ClientLogos from '../components/ClientLogos';
 import FeaturesSection from '../components/FeaturesSection';
-import GettingStartedSection from '../components/GettingStartedSection';
-import StatsSection from '../components/StatsSection';
-import PerformanceSection from '../components/PerformanceSection';
-import TrustedTools from '../components/TrustedTools';
-import ContributionSection from '../components/ContributionSection';
-import CtaSection from '../components/CtaSection';
+import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 
 export default function LandingPage() {
   return (
-    <div className="bg-white text-gray-900 overflow-x-hidden">
+    <div className="bg-white text-gray-900">
       <LandingHero />
+      <ClientLogos />
       <FeaturesSection />
-      <GettingStartedSection />
-      <StatsSection />
-      <PerformanceSection />
-      <TrustedTools />
-      <ContributionSection />
-      <CtaSection />
+      <ContactSection />
       <Footer />
     </div>
   );
