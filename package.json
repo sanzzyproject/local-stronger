@@ -1,6 +1,5 @@
-// package.json
 {
-  "name": "localvault-app",
+  "name": "local-stronger",
   "private": true,
   "version": "1.0.0",
   "type": "module",
