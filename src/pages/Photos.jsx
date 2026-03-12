@@ -15,7 +15,7 @@ export default function Photos() {
 
   return (
     <div>
-      <h2 className="text-xl font-semibold mb-4">📸 Photos</h2>
+      <h2 className="text-xl font-semibold mb-4">Photos</h2>
       {files.length === 0 ? (
         <p className="text-center text-gray-400 py-10 glass rounded-2xl">No photos stored.</p>
       ) : (
