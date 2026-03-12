@@ -1,79 +1,62 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 
-// Ikon SVG kustom (sederhana namun modern)
-const LightningIcon = () => (
-  <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+// Ikon SVG sederhana untuk setiap fitur
+const UIIcon = () => (
+  <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
   </svg>
 );
 
-const LockIcon = () => (
-  <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+const MobileIcon = () => (
+  <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
   </svg>
 );
 
-const CodeIcon = () => (
-  <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+const DesignIcon = () => (
+  <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+  </svg>
+);
+
+const DevIcon = () => (
+  <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
   </svg>
 );
 
 const features = [
   {
-    icon: <LightningIcon />,
-    title: 'Lightning Fast',
-    description: 'High-performance local storage using IndexedDB for instant file access with no network delays.',
+    icon: <UIIcon />,
+    title: 'UX & UI',
+    description: 'Designing interfaces that are intuitive, efficient, and enjoyable to use.',
   },
   {
-    icon: <LockIcon />,
-    title: 'Secure Local Storage',
-    description: 'Files are stored directly inside your browser and never uploaded to any external server.',
+    icon: <MobileIcon />,
+    title: 'Web & Mobile App',
+    description: 'Transforming ideas into exceptional web and mobile app experiences.',
   },
   {
-    icon: <CodeIcon />,
-    title: 'Easy Integration',
-    description: 'Built with modern web technologies like React and TailwindCSS for a smooth and responsive experience.',
+    icon: <DesignIcon />,
+    title: 'Design & Creative',
+    description: 'Creating visually stunning designs that connect with your audience.',
+  },
+  {
+    icon: <DevIcon />,
+    title: 'Development',
+    description: 'Bringing your vision to life with the latest technology and design trends.',
   },
 ];
 
 export default function FeaturesSection() {
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('opacity-100', 'translate-y-0');
-            entry.target.classList.remove('opacity-0', 'translate-y-10');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const cards = document.querySelectorAll('.feature-card');
-    cards.forEach((card) => observer.observe(card));
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section ref={sectionRef} className="max-w-7xl mx-auto px-6 py-20">
-      <div className="grid md:grid-cols-3 gap-8">
+    <section className="max-w-7xl mx-auto px-6 py-20">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {features.map((feature, idx) => (
-          <div
-            key={idx}
-            className="feature-card opacity-0 translate-y-10 transition-all duration-700 group"
-            style={{ transitionDelay: `${idx * 150}ms` }}
-          >
-            <div className="bg-white/70 backdrop-blur-lg border border-white/20 rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-              <div className="mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                {feature.icon}
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-            </div>
+          <div key={idx} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+            <div className="mb-4">{feature.icon}</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
+            <p className="text-gray-600 leading-relaxed">{feature.description}</p>
           </div>
         ))}
       </div>
