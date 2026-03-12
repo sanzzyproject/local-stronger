@@ -67,7 +67,7 @@ export default function LandingHero() {
                  <img 
                    src="https://j.top4top.io/p_3723punib0.jpg" 
                    alt="App Visual"
-                   className="w-50 h-50 object-cover rounded-3xl shadow-lg rotate-3 transform hover:rotate-0 transition-all duration-500"
+                   className="w-48 h-48 object-cover rounded-3xl shadow-lg rotate-3 transform hover:rotate-0 transition-all duration-500"
                  />
                  
               </div>
