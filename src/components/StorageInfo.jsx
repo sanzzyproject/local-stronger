@@ -42,7 +42,7 @@ export default function StorageInfo() {
         <div className="bg-primary h-2 rounded-full transition-all duration-300" style={{ width: `${usedPercent}%` }} />
       </div>
       <p className="text-xs text-gray-500 mt-3 leading-relaxed">
-        ⚡ Files are stored only in this browser (IndexedDB). Clearing browsing data will erase them. No server upload.
+        Files are stored only in this browser (IndexedDB). Clearing browsing data will erase them. No server upload.
       </p>
     </div>
   );
