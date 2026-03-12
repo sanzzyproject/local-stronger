@@ -1,4 +1,5 @@
 import React from 'react';
+import LandingHero from '../components/HeroSection';
 import LandingHero from '../components/LandingHero';
 import FeaturesSection from '../components/FeaturesSection';
 import StatsSection from '../components/StatsSection';
