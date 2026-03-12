@@ -1,25 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function LandingHero() {
   const navigate = useNavigate();
-  
-  // State untuk efek animasi mengetik
-  const [charIndex, setCharIndex] = useState(0);
-  const text1 = "Building digital ";
-  const text2 = "products & brands.";
-  const totalChars = text1.length + text2.length;
-
-  useEffect(() => {
-    if (charIndex < totalChars) {
-      const timer = setTimeout(() => setCharIndex(charIndex + 1), 60); // Kecepatan ketik 60ms
-      return () => clearTimeout(timer);
-    }
-  }, [charIndex, totalChars]);
-
-  // Membagi teks yang sedang diketik
-  const currentText1 = text1.substring(0, charIndex);
-  const currentText2 = text2.substring(0, Math.max(0, charIndex - text1.length));
 
   return (
     <>
@@ -48,15 +31,11 @@ export default function LandingHero() {
               Memperkenalkan LocalVault
             </div>
             
-            {/* Animasi Ketik pada Title */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-[1.1] tracking-tight min-h-[120px] md:min-h-[160px]">
-              {currentText1} 
-              {charIndex >= text1.length && <br className="hidden md:block" />}
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-[1.1] tracking-tight">
+              Building digital <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">
-                {currentText2}
+                products & brands.
               </span>
-              {/* Kursor Berkedip (Blinking Cursor) */}
-              <span className="inline-block w-1 md:w-2 h-[1em] bg-blue-600 ml-1 animate-pulse align-middle"></span>
             </h1>
             
             <p className="mt-6 text-lg md:text-xl text-gray-500 max-w-lg leading-relaxed mx-auto md:mx-0">
@@ -83,11 +62,14 @@ export default function LandingHero() {
                 <div className="w-3 h-3 rounded-full bg-gray-300"></div>
               </div>
               <div className="flex-1 p-8 bg-gradient-to-b from-blue-50/50 to-white flex items-center justify-center">
+                 
+                 {/* UPDATE: Logo diganti dengan gambar 1:1 di sini */}
                  <img 
                    src="https://h.top4top.io/p_37230f75i0.jpg" 
                    alt="App Visual"
                    className="w-40 h-40 object-cover rounded-3xl shadow-lg rotate-3 transform hover:rotate-0 transition-all duration-500"
                  />
+                 
               </div>
             </div>
           </div>
