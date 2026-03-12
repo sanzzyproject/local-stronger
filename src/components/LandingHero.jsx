@@ -32,9 +32,9 @@ export default function LandingHero() {
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-[1.1] tracking-tight">
-              Building digital <br className="hidden md:block" />
+              Private Browser <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">
-                products & brands.
+                Based File Storage.
               </span>
             </h1>
             
