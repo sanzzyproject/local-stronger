@@ -1,21 +1,23 @@
 import React from 'react';
-import LandingHero from '../components/LandingHero';
-import FeaturesSection from '../components/FeaturesSection';
-import StatsSection from '../components/StatsSection';
-import PerformanceSection from '../components/PerformanceSection';
-import TrustedTools from '../components/TrustedTools';
-import ContributionSection from '../components/ContributionSection';
-import CtaSection from '../components/CtaSection';
-import Footer from '../components/Footer';
+import HeroSection from '../components/landing/HeroSection';
+import FeaturesSection from '../components/landing/FeaturesSection';
+import GettingStartedSection from '../components/landing/GettingStartedSection';
+import StatsSection from '../components/landing/StatsSection';
+import PerformanceSection from '../components/landing/PerformanceSection';
+import TrustedSection from '../components/landing/TrustedSection';
+import ContributionSection from '../components/landing/ContributionSection';
+import CtaSection from '../components/landing/CtaSection';
+import Footer from '../components/landing/Footer';
 
 export default function LandingPage() {
   return (
-    <div className="bg-white text-gray-900 overflow-x-hidden">
-      <LandingHero />
+    <div className="bg-white text-gray-900">
+      <HeroSection />
       <FeaturesSection />
+      <GettingStartedSection />
       <StatsSection />
       <PerformanceSection />
-      <TrustedTools />
+      <TrustedSection />
       <ContributionSection />
       <CtaSection />
       <Footer />
