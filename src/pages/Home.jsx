@@ -27,7 +27,7 @@ export default function Home() {
       <StorageInfo />
 
       <div>
-        <h2 className="text-lg font-medium mb-3 flex items-center gap-2">📋 Recent files</h2>
+        <h2 className="text-lg font-medium mb-3 flex items-center gap-2">Recent files</h2>
         {recentFiles.length === 0 ? (
           <p className="text-center text-gray-400 py-6 glass rounded-2xl">No files yet. Upload something!</p>
         ) : (
