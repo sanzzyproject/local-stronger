@@ -32,28 +32,46 @@ export default function LandingHero() {
               Memperkenalkan LocalVault
             </div>
 
-            {/* UPDATE: Widget-widget kecil di atas judul */}
-            <div className="flex items-center gap-3 mb-6 justify-center md:justify-start">
-              {/* Widget Penyimpanan Besar */}
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs font-medium border border-gray-200 shadow-inner">
-                <svg className="w-4 h-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                </svg>
-                Penyimpanan Besar 33GB
+            {/* UPDATE: Widget-widget kecil di atas judul - Dibuat lebih modern, berwarna, dan rame */}
+            <div className="flex flex-wrap items-center gap-3 mb-6 justify-center md:justify-start">
+              {/* Widget 1: Penyimpanan */}
+              <div className="cursor-default inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white text-gray-700 text-xs sm:text-sm font-medium border border-gray-200 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.1)] hover:shadow-[0_4px_15px_-3px_rgba(6,81,237,0.15)] transition-all duration-300 hover:-translate-y-0.5">
+                <div className="flex items-center justify-center w-5 h-5 rounded-full bg-blue-50 text-blue-600">
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                  </svg>
+                </div>
+                33GB Storage
               </div>
-              {/* Widget Privasi Total */}
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs font-medium border border-gray-200 shadow-inner">
-                <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-                Privasi Total
+
+              {/* Widget 2: Privasi */}
+              <div className="cursor-default inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white text-gray-700 text-xs sm:text-sm font-medium border border-gray-200 shadow-[0_2px_10px_-3px_rgba(34,197,94,0.1)] hover:shadow-[0_4px_15px_-3px_rgba(34,197,94,0.15)] transition-all duration-300 hover:-translate-y-0.5">
+                <div className="flex items-center justify-center w-5 h-5 rounded-full bg-green-50 text-green-600">
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                </div>
+                Total Privacy
               </div>
-              {/* Widget Cepat & Tanpa Akun */}
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs font-medium border border-gray-200 shadow-inner">
-                <svg className="w-4 h-4 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-                Cepat & Tanpa Akun
+
+              {/* Widget 3: Kecepatan */}
+              <div className="cursor-default inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white text-gray-700 text-xs sm:text-sm font-medium border border-gray-200 shadow-[0_2px_10px_-3px_rgba(245,158,11,0.1)] hover:shadow-[0_4px_15px_-3px_rgba(245,158,11,0.15)] transition-all duration-300 hover:-translate-y-0.5">
+                <div className="flex items-center justify-center w-5 h-5 rounded-full bg-amber-50 text-amber-500">
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                Ultra Fast
+              </div>
+
+              {/* Widget 4: Local First */}
+              <div className="cursor-default inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white text-gray-700 text-xs sm:text-sm font-medium border border-gray-200 shadow-[0_2px_10px_-3px_rgba(168,85,247,0.1)] hover:shadow-[0_4px_15px_-3px_rgba(168,85,247,0.15)] transition-all duration-300 hover:-translate-y-0.5">
+                <div className="flex items-center justify-center w-5 h-5 rounded-full bg-purple-50 text-purple-500">
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 12h14M5 12a4 4 0 01-4-4O5 12zm0 0a4 4 0 00-4 4O5 12zm14 0a4 4 0 014-4O19 12zm0 0a4 4 0 004 4O19 12zM12 5v14m0-14a4 4 0 00-4-4O12 5zm0 0a4 4 0 014-4O12 5zm0 14a4 4 0 004 4O12 19zm0 0a4 4 0 01-4 4O12 19z" />
+                  </svg>
+                </div>
+                Local First
               </div>
             </div>
             
@@ -93,7 +111,6 @@ export default function LandingHero() {
                  <img 
                    src="https://k.top4top.io/p_3724t57qm0.jpg" 
                    alt="App Visual"
-            
                  />
                  
               </div>
