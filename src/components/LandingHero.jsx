@@ -55,23 +55,14 @@ export default function LandingHero() {
           {/* Visual Modern & Elegan di sisi kanan */}
           <div className="relative md:w-1/2 flex justify-center mt-12 md:mt-0">
             <div className="absolute inset-0 bg-gradient-to-tr from-blue-100 to-transparent rounded-full blur-3xl opacity-60 w-[400px] h-[400px]"></div>
-            <div className="relative w-full max-w-md aspect-square rounded-[2.5rem] bg-white border border-gray-100 shadow-2xl overflow-hidden flex flex-col">
-              <div className="h-12 bg-gray-50 border-b border-gray-100 flex items-center px-6 gap-2">
-                <div className="w-3 h-3 rounded-full bg-gray-300"></div>
-                <div className="w-3 h-3 rounded-full bg-gray-300"></div>
-                <div className="w-3 h-3 rounded-full bg-gray-300"></div>
-              </div>
-              <div className="flex-1 p-8 bg-gradient-to-b from-blue-50/50 to-white flex items-center justify-center">
-                 
-                 {/* UPDATE: Logo diganti dengan gambar 1:1 di sini */}
-                 <img 
-                   src="https://k.top4top.io/p_3724t57qm0.jpg" 
-                   alt="App Visual"
             
-                 />
-                 
-              </div>
-            </div>
+            {/* UPDATE: Frame browser dihapus, langsung menampilkan gambar dengan bayangan yang elegan */}
+            <img 
+              src="https://k.top4top.io/p_3724t57qm0.jpg" 
+              alt="App Visual"
+              className="relative w-full max-w-md rounded-[2.5rem] shadow-2xl object-cover"
+            />
+            
           </div>
         </div>
       </section>
