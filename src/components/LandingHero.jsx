@@ -65,7 +65,7 @@ export default function LandingHero() {
                  
                  {/* UPDATE: Logo diganti dengan gambar 1:1 di sini */}
                  <img 
-                   src="https://g.top4top.io/p_3724i5z6t0.png" 
+                   src="https://k.top4top.io/p_3724t57qm0.jpg" 
                    alt="App Visual"
             
                  />
