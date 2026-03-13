@@ -83,7 +83,7 @@ export default function LandingHero() {
             </h1>
             
             <p className="mt-6 text-lg md:text-xl text-gray-500 max-w-lg leading-relaxed mx-auto md:mx-0">
-              Collaborate with brands and agencies to create impactful results with secure and reliable solutions.
+              Keep your files private and secure with temporary browser storage that never uploads your data to external servers.
             </p>
             
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
